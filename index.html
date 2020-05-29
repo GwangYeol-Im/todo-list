@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="main" class="flex">
+      <div class="js-clock clock">
+        <h1 class="js-title"></h1>
+        <h2 class="js-question">What is your name?</h2>
+        <form class="js-form form">
+          <input type="text" />
+        </form>
+        <h4 class="js-greetings greetings"></h4>
+      </div>
+      <form class="js-toDoForm toDoForm">
+        <input type="text" />
+        <p>Note your plan.</p>
+      </form>
+      <div class="toDoAlert flex">
+        <p>🔥</p>
+        <p>Cheer up! Hang in there.</p>
+      </div>
+      <div class="toDoSection flex">
+        <ul class="js-toDoList toDoList"></ul>
+      </div>
+      <button class="js-reset reset">Reset</button>
+      <span class="js-weather weather"></span>
+    </section>
+
+    <script src="JS/clock.js"></script>
+    <script src="JS/greeting.js"></script>
+    <script src="JS/todo.js"></script>
+    <script src="JS/bg.js"></script>
+    <script src="JS/weather.js"></script>
+  </body>
+</html>
