@@ -5,7 +5,7 @@ const body = document.querySelector("body");
 const IMG_NUMBER = 6;
 
 function paintImage(imgNumber) {
-  const image = new Image();
+  const image = document.createElement("img");
   image.src = `/images/${imgNumber + 1}.jpg`;
   image.classList.add("background");
   body.appendChild(image);
