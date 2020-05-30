@@ -9,7 +9,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
   greetings = document.querySelector(".js-greetings"),
   displayQ = document.querySelector(".js-question"),
   dpForm = document.querySelector(".js-form"),
-  dpWeather = document.querySelector(".weather");
+  dpWeather = document.querySelector(".js-weather");
 
 const TODOS_LS = "toDos";
 
