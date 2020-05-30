@@ -184,6 +184,7 @@ p {
   flex-basis: 70%;
   padding-left: 20px;
   font-size: var(--font-small);
+  line-height: 35px;
 }
 
 .js-reset {
