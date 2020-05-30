@@ -6,7 +6,8 @@ const form = document.querySelector(".js-form"),
   formDisplay = document.querySelector(".toDoForm"),
   question = document.querySelector(".js-question"),
   weatherDp = document.querySelector(".weather"),
-  resetDp = document.querySelector(".js-reset");
+  resetDp = document.querySelector(".js-reset"),
+  greetAlert = document.querySelector(".js-greetAlert");
 
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
@@ -34,16 +35,29 @@ function hideQuestion() {
   question.classList.add("question-none");
 }
 
+function greetingAlert() {
+  greetAlert.classList.add("showing");
+}
+
+function removeGreetAlert() {
+  greetAlert.classList.remove("showing");
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = input.value;
-  paintGreeting(currentValue);
-  saveName(currentValue);
-  toDoFormDisplay();
-  hideQuestion();
-  weatherDisplay();
-  resetDisplay();
-  input.value = "";
+  if (currentValue.length === 0) {
+    greetingAlert();
+  } else {
+    removeGreetAlert();
+    paintGreeting(currentValue);
+    saveName(currentValue);
+    toDoFormDisplay();
+    hideQuestion();
+    weatherDisplay();
+    resetDisplay();
+    input.value = "";
+  }
 }
 
 function askForName() {
@@ -77,6 +91,7 @@ function loadName() {
     toDoFormDisplay();
     weatherDisplay();
     hideQuestion();
+    resetDisplay();
   }
 }
 

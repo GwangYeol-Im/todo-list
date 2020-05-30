@@ -81,6 +81,9 @@ function fullToDoAlert() {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
+  if (currentValue.length === 0) {
+    return;
+  }
   if (toDos.length < 5) {
     paintToDo(currentValue);
   } else {

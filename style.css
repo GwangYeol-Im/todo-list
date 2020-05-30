@@ -117,7 +117,8 @@ p {
 .question-none,
 .toDoAlert,
 .weather,
-.reset {
+.reset,
+.greetAlert {
   display: none;
 }
 
@@ -129,8 +130,14 @@ p {
 .js-question,
 .js-form,
 .js-reset,
-.js-weather {
+.js-weather,
+.js-greetAlert {
   animation: fadeIn 0.5s linear;
+}
+
+.js-greetAlert {
+  height: 60px;
+  line-height: 60px;
 }
 
 .greetings {
